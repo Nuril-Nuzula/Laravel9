@@ -67,6 +67,7 @@ class TaskController extends Controller
         $task = Task::find($id);
         $task->delete();
 
-        return 'berhasil dihapus';
+        return redirect('/tasks');
+        // return 'berhasil dihapus';
     }
 }
