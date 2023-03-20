@@ -33,7 +33,7 @@ class TaskController extends Controller
             'time' => $request->time
         ]);
 
-        return 'success';
+        return redirect('/tasks');
     }
 
     public function show($id)
@@ -43,7 +43,8 @@ class TaskController extends Controller
     }
     public function edit($id)
     {
-        return view('task.edit');
+        $task = Task::find($id);
+        return view('task.edit', compact('task'));
     }
 
 
@@ -53,11 +54,11 @@ class TaskController extends Controller
         $task = Task::find($id);
 
         $task->update([
-            'tasks' => $request->task,
+            'tasks' => $request->tasks,
             'time' => $request->time
         ]);
 
-        return $task;
+        return redirect('/tasks');
         ddd($task);
     }
 

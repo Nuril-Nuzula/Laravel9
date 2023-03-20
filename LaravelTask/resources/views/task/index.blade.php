@@ -7,17 +7,20 @@
         <span class="fs-5 fw-semibold">Task Lists : {{$data->total()}}</span>
         <a href="{{url('/tasks/create')}}" class="btn btn-sm btn-primary">add</a>
     </div>
-    @foreach ($data as $item)
+    @foreach ($data as $i)
     <div class="list-group list-group-flush border-bottom scrollarea">
         <div class="list-group-item list-group-item-action py-3 lh-tight" aria-current="true">
             <div class="d-flex w-100 align-items-center justify-content-between">
-                <strong class="mb-1">{{$item->tasks}}</strong>
+                <strong class="mb-1">{{$i->tasks}}</strong>
                 <small>Wed</small>
             </div>
-            <div class="col-10 mb-1 small">{{$item->time}}</div>
+            <div class="col-10 mb-1 small">{{$i->time}}</div>
             <div class="group-action">
-                <a href="#" class="badge bg-info text-white">edit</a>
-                <a href="#" class="badge bg-danger text-white">delete</a>
+                <form action="{{url("tasks/>$i->id")}}" method="POST">
+                    @csrf
+                    <a href="{{url("/tasks/$i->id/edit") }}" class="badge bg-info text-white">edit</a>
+                    <a href="#" class="badge bg-danger text-white">delete</a>
+                </form>
             </div>
         </div>
     </div>
