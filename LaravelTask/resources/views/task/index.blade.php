@@ -18,8 +18,9 @@
             <div class="group-action">
                 <form action="{{url("tasks/>$i->id")}}" method="POST">
                     @csrf
+                    @method('DELETE')
                     <a href="{{url("/tasks/$i->id/edit") }}" class="badge bg-info text-white">edit</a>
-                    <a href="#" class="badge bg-danger text-white">delete</a>
+                    <button type="submit" class="badge bg-danger text-white">delete</button>
                 </form>
             </div>
         </div>
@@ -28,6 +29,6 @@
     <div class="mt-3 m-auto">
         {{ $data->links('pagination::bootstrap-4') }}
     </div>
-    
+
 </div>
 @endsection
