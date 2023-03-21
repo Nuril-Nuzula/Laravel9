@@ -24,7 +24,8 @@
             </div>
             <div class="col-10 mb-1 small">{{$i->time}}</div>
             <div class="group-action">
-                <form action="{{url("tasks/$i->id")}}" method="POST" onsubmit='return confirm("Yakin  mau hapus {{$i->tasks}}?")'>
+                <!-- onsubmit='return confirm("Yakin  mau hapus {{$i->tasks}}?")' -->
+                <form action="{{url("tasks/$i->id")}}" method="POST" >
                     @csrf
                     @method('DELETE')
                     <a href="{{url("/tasks/$i->id/edit") }}" class="badge bg-info text-white">edit</a>
