@@ -28,7 +28,7 @@
                     @csrf
                     @method('DELETE')
                     <a href="{{url("/tasks/$i->id/edit") }}" class="badge bg-info text-white">edit</a>
-                    <button type="submit" class="badge bg-danger text-white">delete</button>
+                    <button type="submit" class="badge bg-danger text-white deleted">delete</button>
                 </form>
             </div>
         </div>
