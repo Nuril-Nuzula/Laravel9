@@ -30,7 +30,7 @@ class TaskController extends Controller
     {
         $request->validate([
             'time' => ['required'],
-            'tasks' => ['required'],
+            'tasks' => ['required']
         ]);
         Task::create([
             'tasks' => $request->task,
