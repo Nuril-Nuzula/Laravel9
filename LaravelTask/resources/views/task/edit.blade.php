@@ -19,7 +19,7 @@
                 @method('PATCH')
                 <div class="mb-3">
                     <label for="" class="form-label">Time</label>
-                    <input name="time" value="{{$task->time}}" type="text" class="form-control">
+                    <input name="time" value="{{$task->time}}" type="text" class="form-control" value="{{ old('time'), $task->time }}">
                     @error('time')
                     <span class="text-danger">
                         {{$message}}
@@ -28,7 +28,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="" class="form-label">Task</label>
-                    <input name="tasks" value="{{$task->tasks}}" class="form-control" id="" rows="3">
+                    <input name="tasks" value="{{$task->tasks}}" class="form-control" id="" rows="3" value="{{ old('tasks'), $task->tasks }}">
                     @error('tasks')
                     <span class="text-danger">
                         {{$message}}
