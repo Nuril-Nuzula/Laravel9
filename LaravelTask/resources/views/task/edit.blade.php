@@ -20,10 +20,20 @@
                 <div class="mb-3">
                     <label for="" class="form-label">Time</label>
                     <input name="time" value="{{$task->time}}" type="text" class="form-control">
+                    @error('time')
+                    <span class="text-danger">
+                        {{$message}}
+                    </span>
+                    @enderror
                 </div>
                 <div class="mb-3">
                     <label for="" class="form-label">Task</label>
                     <input name="tasks" value="{{$task->tasks}}" class="form-control" id="" rows="3">
+                    @error('tasks')
+                    <span class="text-danger">
+                        {{$message}}
+                    </span>
+                    @enderror
                 </div>
                 <button type="submit" class="btn btn-primary">Update</button>
             </form>

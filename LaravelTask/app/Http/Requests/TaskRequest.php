@@ -28,4 +28,11 @@ class TaskRequest extends FormRequest
             'tasks' => ['required']
         ];
     }
+    public function messages()
+    {
+        return[
+            'required' => 'isian :attribute harus di isi',
+            'time.required' => 'waktu harus diisi'
+        ];
+    }
 }

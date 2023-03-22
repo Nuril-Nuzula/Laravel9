@@ -18,11 +18,21 @@
                 @csrf
                 <div class="mb-3">
                     <label for="" class="form-label">Time</label>
-                    <input placeholder="Tambahkan Nama" name="time" type="text" class="form-control">
+                    <input placeholder="Tambahkan Nama" name="time" type="text" class="form-control" value="{{ old('time') }}">
+                    @error('time')
+                    <span class="text-danger">
+                        {{$message}}
+                    </span>
+                    @enderror
                 </div>
                 <div class="mb-3">
                     <label for="" class="form-label">Task</label>
                     <input placeholder="Tambahkan Task" name="task" class="form-control" id="" rows="3">
+                    @error('tasks')
+                    <span class="text-danger">
+                        {{$message}}
+                    </span>
+                    @enderror
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
