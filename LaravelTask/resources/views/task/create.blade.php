@@ -18,7 +18,7 @@
                 @csrf
                 <div class="mb-3">
                     <label for="" class="form-label">Time</label>
-                    <input placeholder="Tambahkan Nama" name="time" type="text" class="form-control" value="{{ old('time'), $task->time }}">
+                    <input placeholder="Tambahkan Nama" name="time" type="text" class="form-control" value="{{ old('time')}}">
                     @error('time')
                     <span class="text-danger">
                         {{$message}}
@@ -27,7 +27,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="" class="form-label">Task</label>
-                    <input placeholder="Tambahkan Task" name="task" class="form-control" id="" rows="3" value="{{ old('tasks'), $task->tasks }}">
+                    <input placeholder="Tambahkan Task" name="task" class="form-control" id="" rows="3" value="{{ old('tasks') }}">
                     @error('tasks')
                     <span class="text-danger">
                         {{$message}}
