@@ -24,14 +24,14 @@ class TaskRequest extends FormRequest
      */
     public function rules()
     {
-        // $rule_task_unique = Rule::unique('tasks', 'task');
-        // if ($this->method() !== 'POST'){
-        //     $rule_task_unique->ignore($this->route()->parameter('id'));
-        // }
+        $rule_task_unique = Rule::unique('tasks', 'tasks');
+        if ($this->method() !== 'POST'){
+            $rule_task_unique->ignore($this->route()->parameter('id'));
+        }
 
         return [
-            'time' => ['required', 'unique:time'],
-            'tasks' => ['required', 'unique:tasks']
+            'time' => ['required'],
+            'task' => ['required',$rule_task_unique]
         ];
     }
     public function messages()

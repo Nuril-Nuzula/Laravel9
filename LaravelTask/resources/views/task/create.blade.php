@@ -27,8 +27,8 @@
                 </div>
                 <div class="mb-3">
                     <label for="" class="form-label">Task</label>
-                    <input placeholder="Tambahkan Task" name="task" class="form-control" id="" rows="3" value="{{ old('tasks') }}">
-                    @error('tasks')
+                    <input placeholder="Tambahkan Task" name="task" class="form-control" id="" rows="3" value="{{ old('tasks' )}}">
+                    @error('task')
                     <span class="text-danger">
                         {{$message}}
                     </span>
