@@ -30,15 +30,6 @@
                     </span>
                     @enderror
                 </div>
-                <div class="mb-3">
-                    <label for="" class="form-label">Password</label>
-                    <input placeholder="Tambahkan Password" name="password" type="password" class="form-control" value="{{ old('password')}}">
-                    @error('password')
-                    <span class="text-danger">
-                        {{$message}}
-                    </span>
-                    @enderror
-                </div>
                 <button type="submit" class="btn btn-primary">Send Reset Link </button>
             </form>
         </div>
