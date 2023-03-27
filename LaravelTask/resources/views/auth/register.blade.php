@@ -13,7 +13,7 @@
     @endif -->
     <div class="card">
         <div class="card-body">
-            <h2>Add Data</h2>
+            <h2>Register</h2>
             <form action="{{ route('register') }}" method="POST">
                 @csrf
                 <div class="mb-3">
