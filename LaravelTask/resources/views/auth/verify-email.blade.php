@@ -20,7 +20,7 @@
             </div>
             @endif
             
-            Before proceeding, please check your email for verification. 
+            Before proceeding, please check your email for verification.
             Or <form class="d-inline" action="{{ route('verification.email') }}" method="POST">
                 @csrf
                 
