@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [HomeController::class, 'index']);
 
 // create
-Route::get('/tasks', [TaskController::class, 'index'])->middleware('auth');
+Route::get('/tasks', [TaskController::class, 'index']);
 Route::get('tasks/create', [TaskController::class, 'create']);
 
 // read
